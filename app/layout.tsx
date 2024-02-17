@@ -31,7 +31,7 @@ export default function RootLayout({
         attribute="class"
         defaultTheme="dark"
         enableSystem
-        disableTransitionOnChange4
+        // disableTransitionOnChange4
       >
         <body
           className={cn(
