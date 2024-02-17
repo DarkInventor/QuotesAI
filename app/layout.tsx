@@ -9,7 +9,9 @@ import Link from "@/node_modules/next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/toggle";
-import HeroPage from "./HeroPage/page";
+import HeroPage from "./hero/page";
+import { SiteFooter } from "@/components/site-footer";
+import PricingPage from "@/app/pricing/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +31,7 @@ export default function RootLayout({
         attribute="class"
         defaultTheme="dark"
         enableSystem
-        disableTransitionOnChange
+        disableTransitionOnChange4
       >
         <body
           className={cn(
@@ -37,8 +39,8 @@ export default function RootLayout({
           )}
         >
           <div className="flex min-h-screen flex-col">
-            <header className="container supports-backdrop-blur:bg-background/80 sticky top-0 z-40 w-full backdrop-blur bg-background border-b">
-              <div className="flex h-20 items-center justify-between py-6">
+            <header className="h-16 container sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div className="flex h-16 items-center justify-between py-6 w-full">
                 <MainNav />
                 <nav>
                   <div className="md:flex">
@@ -51,17 +53,19 @@ export default function RootLayout({
                           "px-4"
                         )}
                       >
-                        Login
+                        Get Started
                       </Link>
                     </div>
                   </div>
                 </nav>
               </div>
             </header>
-            <HeroPage />
+            {/* <HeroPage /> */}
+            <main className="flex-1">{children}</main>
           </div>
-        
-          {children}
+          {/* <PricingPage />                */}
+
+          <SiteFooter />
         </body>
       </ThemeProvider>
     </html>

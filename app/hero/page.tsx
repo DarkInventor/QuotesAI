@@ -1,7 +1,7 @@
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import Link from '@/node_modules/next/link'
-import React from 'react'
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "@/node_modules/next/link";
+import React from "react";
 
 function HeroPage() {
   return (
@@ -162,12 +162,11 @@ function HeroPage() {
               GitHub
             </Link>
             .{" "}
-          </p>          
+          </p>
         </div>
       </section>
     </>
-    
-  )
+  );
 }
 
-export default HeroPage
+export default HeroPage;
