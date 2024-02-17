@@ -59,6 +59,7 @@ function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
+      {/* @ts-ignore */}
       <SheetContent side="left" className="pr-0">
         <MobileLink
           href="/"
