@@ -22,9 +22,11 @@
     "radix-ui": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "recharts": "^2.12.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "types": "link:next-themes/dist/types"
+    "types": "link:next-themes/dist/types",
+    "vaul": "^0.9.0"
   },
   "devDependencies": {
     "@types/node": "^20",

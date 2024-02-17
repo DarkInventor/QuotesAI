@@ -12,6 +12,7 @@ import { ModeToggle } from "@/components/toggle";
 import HeroPage from "./hero/page";
 import { SiteFooter } from "@/components/site-footer";
 import PricingPage from "@/app/pricing/page";
+import MobileNav from "@/components/mobile-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <header className="h-16 container sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="flex h-16 items-center justify-between py-6 w-full">
+              <MobileNav />
                 <MainNav />
                 <nav>
                   <div className="md:flex">
@@ -61,9 +63,10 @@ export default function RootLayout({
               </div>
             </header>
             {/* <HeroPage /> */}
+           
             <main className="flex-1">{children}</main>
           </div>
-          {/* <PricingPage />                */}
+       
 
           <SiteFooter />
         </body>
