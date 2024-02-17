@@ -83,7 +83,8 @@ function MobileNav() {
                   </MobileLink>
                 )
             )} */}
-           <p>item1</p> 
+            <MobileLink href="/" onOpenChange={setOpen}>Home</MobileLink> 
+           <MobileLink href="/pricing" onOpenChange={setOpen}>Pricing</MobileLink> 
           </div>
           <div className="flex flex-col space-y-2">
             <p>item2</p>
