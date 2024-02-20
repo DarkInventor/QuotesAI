@@ -9,9 +9,9 @@ import Link from "@/node_modules/next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/toggle";
-import HeroPage from "./hero/page";
+// import HeroPage from "./hero/page";
 import { SiteFooter } from "@/components/site-footer";
-import PricingPage from "@/app/pricing/page";
+// import PricingPage from "@/app/pricing/page";
 import MobileNav from "@/components/mobile-nav";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,18 +28,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem
-        // disableTransitionOnChange4
+      <body
+        className={cn(
+          "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased",
+        )}
       >
-        <body
-          className={cn(
-            "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
-          )}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          // disableTransitionOnChange4
         >
-          <div className="flex min-h-screen flex-col">
+          {/* <div className="flex min-h-screen flex-col">
             <header className="h-16 container sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="flex h-16 items-center justify-between py-6 w-full">
               <MobileNav />
@@ -61,16 +61,15 @@ export default function RootLayout({
                   </div>
                 </nav>
               </div>
-            </header>
-            {/* <HeroPage /> */}
-           
-            <main className="flex-1">{children}</main>
-          </div>
-       
+            </header> */}
+          {/* <HeroPage /> */}
 
-          <SiteFooter />
-        </body>
-      </ThemeProvider>
+          <main className="flex-1">{children}</main>
+        </ThemeProvider>
+        {/* </div>
+
+          <SiteFooter /> */}
+      </body>
     </html>
   );
 }

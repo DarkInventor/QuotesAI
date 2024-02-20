@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Sheet,
@@ -18,8 +18,8 @@ import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
 
 function MobileNav() {
-  const [open, setOpen] = React.useState(false)
-  
+  const [open, setOpen] = React.useState(false);
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -83,22 +83,32 @@ function MobileNav() {
                   </MobileLink>
                 )
             )} */}
-            <MobileLink href="/" onOpenChange={setOpen}>Home</MobileLink> 
-           <MobileLink href="/pricing" onOpenChange={setOpen}>Pricing</MobileLink> 
+            <MobileLink href="/" onOpenChange={setOpen}>
+              Home
+            </MobileLink>
+            <MobileLink href="/" onOpenChange={setOpen}>
+              Getting Started
+            </MobileLink>
+            <MobileLink href="/" onOpenChange={setOpen}>
+              Components
+            </MobileLink>
+            <MobileLink href="/pricing" onOpenChange={setOpen}>
+              Pricing
+            </MobileLink>
           </div>
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             <p>item2</p>
-          </div>
+          </div> */}
         </ScrollArea>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void
-  children: React.ReactNode
-  className?: string
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
 function MobileLink({
@@ -108,19 +118,19 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
+        router.push(href.toString());
+        onOpenChange?.(false);
       }}
       className={cn(className)}
       {...props}
     >
       {children}
     </Link>
-  )
+  );
 }
 export default MobileNav;
