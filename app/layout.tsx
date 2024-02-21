@@ -37,7 +37,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem
-          // disableTransitionOnChange4
+          disableTransitionOnChange
         >
           {/* <div className="flex min-h-screen flex-col">
             <header className="h-16 container sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -65,10 +65,11 @@ export default function RootLayout({
           {/* <HeroPage /> */}
 
           <main className="flex-1">{children}</main>
-        </ThemeProvider>
-        {/* </div>
+
+          {/* </div>
 
           <SiteFooter /> */}
+        </ThemeProvider>
       </body>
     </html>
   );
