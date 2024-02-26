@@ -4,6 +4,7 @@ import { NextResponse } from "next/server"
 
 export default withAuth(
   async function middleware(req: { nextUrl: { pathname: string; search: any }; url: string | URL | undefined }) {
+    {/* @ts-ignore */}
     const token = await getToken({ req })
     const isAuth = !!token
     const isAuthPage =
