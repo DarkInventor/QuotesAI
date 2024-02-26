@@ -8,11 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ThemeProvider } from "@/components/theme-provider";
+import { signIn } from 'next-auth/react';
+import { useToast } from "@/hooks/use-toast";
+import { title } from "process";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const {toast} = useToast()
 
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
@@ -21,6 +25,24 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);
+  }
+
+  const loginwithGoogle = async () => {
+    setIsLoading(true);
+
+    try {
+      // throw new Error()
+      await signIn('google')
+    } catch(error) {
+      toast({
+      // Toast Notification
+      title: 'There was a problem.',
+      description:  'There was an error Logging in with Google',
+      variant: 'destructive',
+    })
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -59,7 +81,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           </span>
         </div>
       </div>
-      <Button variant="outline" type="button" disabled={isLoading}>
+      <Button onClick={loginwithGoogle} variant="outline" type="button" isLoading={isLoading}>
         {isLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (

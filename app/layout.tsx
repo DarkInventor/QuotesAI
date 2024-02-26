@@ -13,6 +13,7 @@ import { ModeToggle } from "@/components/toggle";
 import { SiteFooter } from "@/components/site-footer";
 // import PricingPage from "@/app/pricing/page";
 import MobileNav from "@/components/mobile-nav";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,6 +70,7 @@ export default function RootLayout({
           {/* </div>
 
           <SiteFooter /> */}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
