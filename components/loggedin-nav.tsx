@@ -55,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function MainNav() {
+export function LoggedInNav() {
 
 
   return (
@@ -65,7 +65,7 @@ export function MainNav() {
         <span className="font-bold hidden lg:block md:block">Chatgpt</span>
         <Badge className="hidden lg:block md:block">Beta</Badge>
       </Link>
-      <NavigationMenu className="hidden lg:block">
+      {/* <NavigationMenu className="hidden lg:block">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent">Getting started</NavigationMenuTrigger>
@@ -124,7 +124,7 @@ export function MainNav() {
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
-      </NavigationMenu>
+      </NavigationMenu> */}
     </div>
   );
 }
