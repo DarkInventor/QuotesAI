@@ -11,6 +11,7 @@ import { getAuthSession } from "@/lib/auth"
 import Link from "@/node_modules/next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { LoggedInNav } from "@/components/loggedin-nav"
+import { ModeToggle } from "@/components/toggle"
 
 // import { UserAccountNav } from "@/components/user-account-nav"
 
@@ -33,8 +34,10 @@ export default async function DashboardLayout({
   return (
     <div className="flex min-h-screen flex-col space-y-6">
       <header className="sticky top-0 z-40 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
+        <div className="container flex h-16 items-center py-4 justify-between">
           <LoggedInNav/>
+          <div className="flex items-center gap-4 mx-2">
+          <ModeToggle />
           <UserAccountNav
             user={{
               name: user.name,
@@ -42,10 +45,13 @@ export default async function DashboardLayout({
               email: user.email,
             }}
           />
+          
+            </div>
         </div>
+       
       </header>
-      <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
-        <aside className="hidden w-[200px] flex-col md:flex">
+      {/* <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]"> */}
+        {/* <aside className="hidden w-[200px] flex-col md:flex"> */}
           {/* <DashboardNav items={dashboardConfig.sidebarNav} /> */}
           {/* <p>hii</p> */}
           {/* { session ?.user?( <UserAccountNav
@@ -55,12 +61,13 @@ export default async function DashboardLayout({
               email: user.email,
             }}
           /> ) : ( <Link href="/login" className={buttonVariants()}>Sign In</Link> )}  */}
-        </aside>
-        <main className="flex w-full flex-1 flex-col overflow-hidden">
+        {/* </aside> */}
+        <main className="flex w-full flex-1 flex-col justify-center">
           {children}
         </main>
-      </div>
+      {/* </div> */}
       <SiteFooter className="border-t" />
-    </div>
+  
+      </div>
   )
 }

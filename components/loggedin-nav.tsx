@@ -15,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Badge } from "./ui/badge";
+import { ModeToggle } from "./toggle";
 
 
 const components: { title: string; href: string; description: string }[] = [
@@ -60,11 +61,12 @@ export function LoggedInNav() {
 
   return (
     <div className="mr-4 md:flex">
-      <Link href="/" className="lg:mr-6 sm:mr-0 flex items-center gap-2">
-        <Icons.logo className="h-6 w-6 hidden lg:block md:block" />
-        <span className="font-bold hidden lg:block md:block">Chatgpt</span>
+      <Link href="/dashboard" className="lg:mr-6 sm:mr-0 flex items-center gap-2">
+        <Icons.logo className="h-6 w-6 lg:block md:block" />
+        <span className="font-bold lg:block md:block">QuotesAI</span>
         <Badge className="hidden lg:block md:block">Beta</Badge>
       </Link>
+    
       {/* <NavigationMenu className="hidden lg:block">
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -125,7 +127,9 @@ export function LoggedInNav() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu> */}
+      
     </div>
+    
   );
 }
 

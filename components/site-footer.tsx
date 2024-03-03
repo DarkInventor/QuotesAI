@@ -30,7 +30,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               Vercel
             </a>
-            . Credits to {" "}
+            . Component Credits to {" "}
             <a
               href="https://twitter.com/shadcn"
               target="_blank"
