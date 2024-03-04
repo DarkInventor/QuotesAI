@@ -31,7 +31,7 @@ function HeroPage() {
               
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
             >
-              Let's Explore 👇🏻
+              Let&apos;s Explore 👇🏻
             </a>
           </div>
         </div>
@@ -145,7 +145,7 @@ function HeroPage() {
             QuotesAI - Unlock the Wisdom
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Let's Try Now - {" "}
+            Let&apos;s Try Now - {" "}
             <a
               href="/login"
              
