@@ -125,3 +125,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 639px) { /* Adjust this value based on your project's breakpoint for small screens */
+  .mt-sm-2 {
+    margin-top: 0.5rem;
+    max-width: 150px;
+    
+  }
+}

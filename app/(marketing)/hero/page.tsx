@@ -47,16 +47,16 @@ function HeroPage() {
             
           </div>
         </div>
-        <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:w-[700px] lg:h-[400px]">
+        <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:w-[700px] lg:h-[400px] sm:w-auto">
       <img
         src="/darkoutput.png"
         alt="Hero Image"
-        className="hidden lg:w-[700px] lg:h-[400px] rounded-[inherit] border object-contain shadow-lg dark:block"
+        className="hidden lg:w-[700px] lg:h-[400px] sm:w-auto rounded-[inherit] border object-contain shadow-lg dark:block"
       />
       <img
         src="/lightoutput.png"
         alt="Hero Image"
-        className="block lg:w-[700px] lg:h-[400px] rounded-[inherit] border object-contain shadow-lg dark:hidden"
+        className="block lg:w-[700px] lg:h-[400px]  sm:w-auto rounded-[inherit] border object-contain shadow-lg dark:hidden"
       />
  
       <BorderBeam/>
