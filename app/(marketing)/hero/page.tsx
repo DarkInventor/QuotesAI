@@ -19,15 +19,15 @@ function HeroPage() {
            
         
             <ShineBorder
-      className="text-center capitalize bg-muted px-4 py-1.5 text-lg font-medium"
+      className="text-center capitalize bg-muted px-4 py-1.5 text-lg font-medium absolute"
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
-       Introducing QuotesAI ✨
+     Introducing QuotesAI ✨
       </ShineBorder>
   
           {/* </Link> */}
          
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-20">
             Infusing Wisdom into Your Every Mood.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
