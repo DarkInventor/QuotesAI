@@ -3,6 +3,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/more-icons";
+import ShinyButton from "@/components/magicui/shiny-button";
 
 export const metadata = {
   title: "Pricing",
@@ -53,9 +54,11 @@ export default function PricingPage() {
               Billed Monthly
             </p>
           </div>
-          <Link href="/api/webhooks/stripe" className={cn(buttonVariants({ size: "lg" }))}>
-            Get Started
+          <Link href="/api/webhooks/stripe" >
+            {/* Get Started */}
+            <ShinyButton text="Get Started" />
           </Link>
+         
         </div>
       </div>
       <div className="mx-auto flex w-full max-w-[58rem] flex-col gap-4">
