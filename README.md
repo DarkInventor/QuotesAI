@@ -2,6 +2,13 @@
 
 QuotesAI is built using Next.js, Tailwind CSS, Shadcn-ui, Magic-ui, Supabase, NextAuth, and Prisma. It is powered by Vercel and the OpenAI API. It uses the Goodreads API to generate category-based quotes as per your current mood/vibe.
 
+## Video Overview
+
+Watch the video below for a quick overview of QuotesAI:
+
+https://github.com/DarkInventor/QuotesAI/assets/67015517/e59b2402-772b-4ede-a28d-951278e6c555
+
+
 ## Environment Variables
 
 ### Supabase Connection Pooling
