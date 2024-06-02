@@ -3,6 +3,7 @@ import { MainNav } from "@/components/main-nav";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 import { fontSans } from "@/lib/fonts";
 import Link from "@/node_modules/next/link";
@@ -68,9 +69,9 @@ export default function RootLayout({
           {/* <HeroPage /> */}
 
           <main className="flex-1">{children}</main>
-
+          <Analytics />
           {/* </div>
-
+           
           <SiteFooter /> */}
           <Toaster />
         </ThemeProvider>
