@@ -1,4 +1,6 @@
 import { Icons } from "@/components/icons";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import ShineBorder from "@/components/magicui/shine-border";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "@/node_modules/next/link";
@@ -7,15 +9,24 @@ import React from "react";
 function HeroPage() {
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <Link
+      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center mb-20">
+          {/* <Link
             href="https://twitter.com/kathanmehtaa"
             className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
             target="_blank"
-          >
-            Click to Follow me on Twitter
-          </Link>
+          > */}
+           
+        
+            <ShineBorder
+      className="text-center capitalize bg-muted px-4 py-1.5 text-lg font-medium"
+      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+    >
+       Introducing QuotesAI ✨
+      </ShineBorder>
+  
+          {/* </Link> */}
+         
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             Infusing Wisdom into Your Every Mood.
           </h1>
@@ -29,13 +40,29 @@ function HeroPage() {
             <a
               href="/#features"
               
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "mt-sm-2")}
             >
               Let&apos;s Explore 👇🏻
             </a>
+            
           </div>
         </div>
+        <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:w-[700px] lg:h-[400px]">
+      <img
+        src="/darkoutput.png"
+        alt="Hero Image"
+        className="hidden lg:w-[700px] lg:h-[400px] rounded-[inherit] border object-contain shadow-lg dark:block"
+      />
+      <img
+        src="/lightoutput.png"
+        alt="Hero Image"
+        className="block lg:w-[700px] lg:h-[400px] rounded-[inherit] border object-contain shadow-lg dark:hidden"
+      />
+ 
+      <BorderBeam/>
+    </div>
       </section>
+      
       <section
         id="features"
         className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
