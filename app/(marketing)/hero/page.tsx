@@ -32,10 +32,8 @@ function HeroPage() {
          
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-20">
             
-          <BlurIn
-      word="Infusing Wisdom into Your Every Mood."
-      className="text-4xl font-bold text-black dark:text-white"
-    />
+         Infusing Wisdom into Your Every Mood
+     
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             Popular Quotes for all categories from millions of books, people, and authors. 
@@ -54,16 +52,16 @@ function HeroPage() {
             
           </div>
         </div>
-        <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:w-[700px] lg:h-[400px] sm:w-auto">
+        <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:max-w-[1000px] overflow-hidden md:overflow-auto lg:overflow-auto">
       <img
         src="/darkoutput.png"
         alt="Hero Image"
-        className="hidden lg:w-[700px] lg:h-[400px] sm:w-auto rounded-[inherit] border object-contain shadow-lg dark:block"
+        className="hidden lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg dark:block overflow-hidden md:overflow-auto lg:overflow-auto"
       />
       <img
         src="/lightoutput.png"
         alt="Hero Image"
-        className="block lg:w-[700px] lg:h-[400px]  sm:w-auto rounded-[inherit] border object-contain shadow-lg dark:hidden"
+        className="block lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg dark:hidden overflow-hidden md:overflow-auto lg:overflow-auto"
       />
  
       <BorderBeam size={250}/>
