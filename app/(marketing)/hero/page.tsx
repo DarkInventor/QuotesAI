@@ -60,7 +60,7 @@ function HeroPage() {
         className="block lg:w-[700px] lg:h-[400px]  sm:w-auto rounded-[inherit] border object-contain shadow-lg dark:hidden"
       />
  
-      <BorderBeam/>
+      <BorderBeam size={250}/>
     </div>
       </section>
       
