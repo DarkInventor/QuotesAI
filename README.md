@@ -1,10 +1,6 @@
-Here's a formatted README for GitHub with an `.env` example for connecting to Supabase via connection pooling with Supavisor:
+# QuotesAI
 
----
-
-# Project Name
-
-This project connects to Supabase via connection pooling with Supavisor. Below is the example of the `.env` file required for the setup.
+QuotesAI is built using Next.js, Tailwind CSS, Shadcn-ui, Magic-ui, Supabase, NextAuth, and Prisma. It is powered by Vercel and the OpenAI API. It uses the Goodreads API to generate category-based quotes as per your current mood/vibe.
 
 ## Environment Variables
 
@@ -47,8 +43,8 @@ STRIPE_WEBHOOK_SECRET=
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/DarkInventor/QuotesAI.git
+   cd QuotesAI
    ```
 
 2. **Create and populate the `.env` file:**
@@ -59,12 +55,12 @@ STRIPE_WEBHOOK_SECRET=
 
 3. **Install dependencies:**
    ```sh
-   npm install
+   pnpm install
    ```
 
 4. **Run the development server:**
    ```sh
-   npm run dev
+   pnpm run dev
    ```
 
 5. **Open your browser and navigate to:**
@@ -83,7 +79,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 3. Commit your changes (`git commit -am 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Create a new Pull Request.
-
----
-
-Feel free to replace `"Project Name"`, `"yourusername"`, and `"yourrepository"` with your actual project name, GitHub username, and repository name respectively.
