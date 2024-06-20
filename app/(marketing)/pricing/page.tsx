@@ -1,15 +1,43 @@
+"use client";
+
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/more-icons";
 import ShinyButton from "@/components/magicui/shiny-button";
+import { useRouter } from "next/navigation";
 
-export const metadata = {
-  title: "Pricing",
-};
+// export const metadata = {
+//   title: "Pricing",
+// };
 
 export default function PricingPage() {
+
+  // const router = useRouter();
+
+  const handleCheckout = async () => {
+    // Call your API endpoint to create a checkout session
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const { url } = await res.json();
+
+    // Redirect to Stripe Checkout
+    if (url) {
+      window.location.href = url;
+    } else {
+      // Handle error (e.g., display a message)
+      console.error('Failed to start the checkout process.');
+    }
+
+    
+  };
+  
   return (
     <section className="container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
       <div className="mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]">
@@ -54,9 +82,9 @@ export default function PricingPage() {
               Billed Monthly
             </p>
           </div>
-          <Link href="/api/webhooks/stripe" >
+          <Link href="#" onClick={handleCheckout}>
             {/* Get Started */}
-            <ShinyButton text="Get Started" />
+            <ShinyButton text="Get Started"/>
           </Link>
          
         </div>

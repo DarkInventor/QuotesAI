@@ -58,6 +58,8 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function LoggedInNav() {
 
+  
+
 
   return (
     <div className="mr-4 md:flex">
@@ -65,6 +67,9 @@ export function LoggedInNav() {
         <Icons.logo className="h-6 w-6 lg:block md:block" />
         <span className="font-bold lg:block md:block">QuotesAI</span>
         <Badge className="hidden lg:block md:block">Beta</Badge>
+
+        
+        
       </Link>
     
       {/* <NavigationMenu className="hidden lg:block">

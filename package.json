@@ -31,6 +31,7 @@
     "framer-motion": "^11.0.8",
     "google": "link:@next/font/google",
     "lucide-react": "^0.330.0",
+    "micro": "^10.0.1",
     "nanoid": "^5.0.6",
     "next": "14.0.4",
     "next-auth": "^4.24.6",

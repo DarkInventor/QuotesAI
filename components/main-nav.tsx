@@ -105,6 +105,11 @@ export function MainNav() {
                 Features
               </NavigationMenuLink>
             </Link>
+            <Link href="/pricing" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Price
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           {/* <NavigationMenuItem>
             <Link href="/pricing" legacyBehavior passHref>
