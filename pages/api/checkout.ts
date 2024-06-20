@@ -173,7 +173,7 @@ async function handleCheckoutCreation(req: NextApiRequest, res: NextApiResponse)
       payment_method_types: ["card"],
       line_items: [
         {
-          price: "price_1PS6wNAPpzV89AesM66IqD9O",
+          price: "price_1PS6GtAPpzV89AesFYQwxtij",
           quantity: 1,
         },
       ],
