@@ -42,7 +42,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "recharts": "^2.12.2",
-    "stripe": "^14.21.0",
+    "stripe": "^15.12.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "types": "link:next-themes/dist/types",
